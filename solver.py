@@ -4,7 +4,8 @@ Solve the Drive Ya Nuts puzzle.
 https://www.jaapsch.net/puzzles/circus.htm
 """
 
-import itertools
+from copy import copy
+from collections import deque
 
 
 SIDES = 6
@@ -19,13 +20,9 @@ class Board(object):
         self.spaces = spaces
 
         for index in range(SPACES - 1):
-            next_space = (index + 2) % SPACES
-            if next_space == 0:
-                next_space = 1
-
             self.connect(0, index, index + 1, (index + 3) % SIDES)
             self.connect(index + 1, (index + 2) % SIDES,
-                         next_space, (index + 5) % SIDES)
+                         max((index + 2) % SPACES, 1), (index + 5) % SIDES)
 
     def connect(self, space1, side1, space2, side2):
         """Connect two spaces by their adjacent sides."""
@@ -60,10 +57,10 @@ class Board(object):
         space.empty()
         return False
 
-    def empty(self):
-        """Remove piece from every space on the board."""
-        for space in self.spaces:
-            space.empty()
+    def remove(self):
+        """Remove the most recently placed piece."""
+        space = next(space for space in reversed(self.spaces) if space.piece is not None)
+        space.empty()
 
     def is_full(self):
         "Determine whether or not every space on the board has a piece."""
@@ -72,8 +69,6 @@ class Board(object):
     def display(self, spoiler=True):
         """Print the board with all placed pieces."""
         pc0, pc1, pc2, pc3, pc4, pc5, pc6 = [space.piece.sides for space in self.spaces]
-        if not spoiler:
-            pc0, pc1, pc2, pc3, pc4, pc5, pc6 = [[' ', ' ', ' ', ' ', ' ', ' ']] * 7
 
         output = '          -----                      \n'
         output += '         /  {0}  \\                 \n'.format(pc1[0])
@@ -113,10 +108,8 @@ class Space(object):
         self.piece = piece
 
     def empty(self):
-        """Remove the piece in this space and return it."""
-        piece = self.piece
+        """Remove the piece in this space."""
         self.piece = None
-        return piece
 
 
 class Piece(object):
@@ -130,11 +123,23 @@ class Piece(object):
         self.sides = self.sides[1:] + self.sides[:1]
 
 
+def place(board, pieces):
+    """Recursive function to find correct placement of pieces."""
+    for _ in range(len(pieces)):
+        piece = pieces.popleft()
+        if board.place(piece):
+            place(board, copy(pieces))
+            if board.is_full():
+                return
+            board.remove()
+        pieces.append(piece)
+
+
 def solve():
     """Instantiate the board and pieces, and solve the puzzle."""
     board = Board()
 
-    permutations = itertools.permutations([
+    pieces = deque([
         Piece([1, 4, 3, 6, 5, 2]),
         Piece([1, 2, 3, 4, 5, 6]),
         Piece([1, 6, 4, 2, 5, 3]),
@@ -144,16 +149,8 @@ def solve():
         Piece([1, 6, 5, 3, 2, 4])
     ])
 
-    for permutation in permutations:
-        board.empty()
-
-        for index in range(SPACES):
-            if not board.place(permutation[index]):
-                break
-
-        if board.is_full():
-            board.display()
-            break
+    place(board, pieces)
+    board.display()
 
 
 if __name__ == '__main__':
