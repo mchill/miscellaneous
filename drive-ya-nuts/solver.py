@@ -66,7 +66,7 @@ class Board(object):
         "Determine whether or not every space on the board has a piece."""
         return all(space.piece is not None for space in self.spaces)
 
-    def display(self, spoiler=True):
+    def display(self):
         """Print the board with all placed pieces."""
         pc0, pc1, pc2, pc3, pc4, pc5, pc6 = [space.piece.sides for space in self.spaces]
 
