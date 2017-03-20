@@ -11,7 +11,7 @@ SIDES = 6
 SPACES = 7
 
 
-class Board:
+class Board(object):
     """Defines the game space, consists of spaces."""
     def __init__(self):
         """Initialize spaces and their connections."""
@@ -23,15 +23,14 @@ class Board:
             if next_space == 0:
                 next_space = 1
 
-            self.connect(spaces[0], index,
-                         spaces[index + 1], (index + 3) % SIDES)
-            self.connect(spaces[index + 1], (index + 2) % SIDES,
-                         spaces[next_space], (index + 5) % SIDES)
+            self.connect(0, index, index + 1, (index + 3) % SIDES)
+            self.connect(index + 1, (index + 2) % SIDES,
+                         next_space, (index + 5) % SIDES)
 
     def connect(self, space1, side1, space2, side2):
         """Connect two spaces by their adjacent sides."""
-        space1.connect(space2, side1, side2)
-        space2.connect(space1, side2, side1)
+        self.spaces[space1].connect(self.spaces[space2], side1, side2)
+        self.spaces[space2].connect(self.spaces[space1], side2, side1)
 
     def place(self, piece):
         """
@@ -48,7 +47,7 @@ class Board:
                 adj = connection['adj']
                 other_side = connection.get('other_side')
 
-                if adj == None or adj.piece == None:
+                if adj is None or adj.piece is None:
                     continue
                 elif space.piece.sides[side] != adj.piece.sides[other_side]:
                     error = True
@@ -72,33 +71,33 @@ class Board:
 
     def display(self, spoiler=True):
         """Print the board with all placed pieces."""
-        p0, p1, p2, p3, p4, p5, p6 = [space.piece.sides for space in self.spaces]
+        pc0, pc1, pc2, pc3, pc4, pc5, pc6 = [space.piece.sides for space in self.spaces]
         if not spoiler:
-            p0, p1, p2, p3, p4, p5, p6 = [[' ', ' ', ' ', ' ', ' ', ' ']] * 7
+            pc0, pc1, pc2, pc3, pc4, pc5, pc6 = [[' ', ' ', ' ', ' ', ' ', ' ']] * 7
 
-        output = '          -----                     \n'
-        output += '         /  {0}  \\                \n'.format(p1[0])
-        output += '        / {0}   {1} \\             \n'.format(p1[5], p1[1])
-        output += '  ----- \\ {0}   {1} / -----       \n'.format(p1[4], p1[2])
-        output += ' /  {0}  \\ \\  {1}  / /  {2}  \\  \n'.format(p6[0], p1[3], p2[0])
-        output += '/ {0}   {1} \\ ----- / {2}   {3} \\\n'.format(p6[5], p6[1], p2[5], p2[1])
-        output += '\\ {0}   {1} / ----- \\ {2}   {3} /\n'.format(p6[4], p6[2], p2[4], p2[2])
-        output += ' \\  {0}  / /  {1}  \\ \\  {2}  /  \n'.format(p6[3], p0[0], p2[3])
-        output += '  ----- / {0}   {1} \\ -----       \n'.format(p0[5], p0[1])
-        output += '  ----- \\ {0}   {1} / -----       \n'.format(p0[4], p0[2])
-        output += ' /  {0}  \\ \\  {1}  / /  {2}  \\  \n'.format(p5[0], p0[3], p3[0])
-        output += '/ {0}   {1} \ ----- / {2}   {3} \\ \n'.format(p5[5], p5[1], p3[5], p3[1])
-        output += '\\ {0}   {1} / ----- \\ {2}   {3} /\n'.format(p5[4], p5[2], p3[4], p3[2])
-        output += ' \\  {0}  / /  {1}  \\ \\  {2}  /  \n'.format(p5[3], p4[0], p3[3])
-        output += '  ----- / {0}   {1} \\ -----       \n'.format(p4[5], p4[1])
-        output += '        \\ {0}   {1} /             \n'.format(p4[4], p4[2])
-        output += '         \\  {0}  /                \n'.format(p4[3])
+        output = '          -----                      \n'
+        output += '         /  {0}  \\                 \n'.format(pc1[0])
+        output += '        / {0}   {1} \\              \n'.format(pc1[5], pc1[1])
+        output += '  ----- \\ {0}   {1} / -----        \n'.format(pc1[4], pc1[2])
+        output += ' /  {0}  \\ \\  {1}  / /  {2}  \\   \n'.format(pc6[0], pc1[3], pc2[0])
+        output += '/ {0}   {1} \\ ----- / {2}   {3} \\ \n'.format(pc6[5], pc6[1], pc2[5], pc2[1])
+        output += '\\ {0}   {1} / ----- \\ {2}   {3} / \n'.format(pc6[4], pc6[2], pc2[4], pc2[2])
+        output += ' \\  {0}  / /  {1}  \\ \\  {2}  /   \n'.format(pc6[3], pc0[0], pc2[3])
+        output += '  ----- / {0}   {1} \\ -----        \n'.format(pc0[5], pc0[1])
+        output += '  ----- \\ {0}   {1} / -----        \n'.format(pc0[4], pc0[2])
+        output += ' /  {0}  \\ \\  {1}  / /  {2}  \\   \n'.format(pc5[0], pc0[3], pc3[0])
+        output += '/ {0}   {1} \\ ----- / {2}   {3} \\ \n'.format(pc5[5], pc5[1], pc3[5], pc3[1])
+        output += '\\ {0}   {1} / ----- \\ {2}   {3} / \n'.format(pc5[4], pc5[2], pc3[4], pc3[2])
+        output += ' \\  {0}  / /  {1}  \\ \\  {2}  /   \n'.format(pc5[3], pc4[0], pc3[3])
+        output += '  ----- / {0}   {1} \\ -----        \n'.format(pc4[5], pc4[1])
+        output += '        \\ {0}   {1} /              \n'.format(pc4[4], pc4[2])
+        output += '         \\  {0}  /                 \n'.format(pc4[3])
         output += '          -----'
 
         print output
 
 
-class Space:
+class Space(object):
     """A space in which a piece can be placed."""
     def __init__(self):
         """Define the sides of the space and set it to not have a piece."""
@@ -120,7 +119,7 @@ class Space:
         return piece
 
 
-class Piece:
+class Piece(object):
     """A piece in the game."""
     def __init__(self, sides):
         """Define the side values."""
