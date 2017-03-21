@@ -2,10 +2,13 @@
 
 I developed the solution to the
 [Drive Ya Nuts](https://www.jaapsch.net/puzzles/circus.htm) puzzle. There are
-7! * 6^6 = 235,146,240 ways that the pieces can be arranged on the board.
-
-I solved the physical version years ago, but I thought it would be fun to go
+7! * 6^6 = 235,146,240 ways that the pieces can be arranged on the board. I
+solved the physical version years ago, but I thought it would be fun to go
 back and solve it programmatically.
+
+The solution uses recursive depth-first search to find mismatches as quickly as
+possible. This ended up being considerably faster than checking every
+permutation of all pieces' placement.
 
 ## Example Output
 
