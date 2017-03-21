@@ -1,0 +1,7 @@
+<div id="footercontainer">
+<div id="footer">
+<p>Copyright &copy; 2011</p>
+<a href="site map.php">Site Map</a>
+</div><!--END FOOTER-->
+</div><!--END FOOTERCONTAINER-->
+</body>

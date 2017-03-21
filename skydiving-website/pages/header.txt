@@ -1,0 +1,111 @@
+<head>
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+
+<title>Skyline Skydiving</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+<script type="text/JavaScript">
+var timeout = 500;
+var closetimer = 0;
+var menuitem = 0;
+
+function menuopen(id) {
+cancelclosetime();
+if (menuitem) menuitem.style.visibility = 'hidden';
+menuitem = document.getElementById(id);
+menuitem.style.visibility = 'visible';
+}
+
+function menuclose() {
+if (menuitem) menuitem.style.visibility = 'hidden';
+}
+
+function closetime() {
+closetimer = window.setTimeout(menuclose, timeout);
+}
+
+function cancelclosetime() {
+if (closetimer) {
+window.clearTimeout(closetimer);
+closetimer = null;
+}
+}
+
+document.onclick = menuclose;
+</script>
+
+</head>
+
+<body>
+<?php
+if ($_SESSION['userlevel']==4) {
+if ($_SESSION['emergency']=="off") {
+echo "<div id=\"emergencyon\"><h1><a href=\"process emergency on.php\">CLICK IN CASE OF EMERGENCY</a></h1></div>";
+} else if ($_SESSION['emergency']=="on") {
+echo "<div id=\"emergencyoff\"><h1><a href=\"process emergency off.php\">CLICK TO END EMERGENCY</a></h1></div>";
+}
+}
+?>
+
+<div id="header">
+  <div id="banner">
+  <h1>Skyline Skydiving</h1>
+  <img src="../images/helicopter.png" />
+  </div><!--END BANNER-->
+
+  <div style="clear:both"></div>
+
+  <div id="menu">
+  <ul>
+  <li>
+    <a href="../index.php">Home</a>
+  </li>
+  <li>
+    <a onmouseover="menuopen('submenu1')" onmouseout="closetime()">Company Info</a>
+    <div id="submenu1">
+      <a href="about us.php" onmouseover="cancelclosetime()" onmouseout="closetime()">About Us</a>
+      <a href="contact us.php" onmouseover="cancelclosetime()" onmouseout="closetime()">Contact Us</a>
+    </div>
+  </li>
+  <li>
+    <a onmouseover="menuopen('submenu2')" onmouseout="closetime()">Services</a>
+    <div id="submenu2">
+      <a href="service information.php" onmouseover="cancelclosetime()" onmouseout="closetime()">Service Information</a>
+      <a href="privacy policy.php" onmouseover="cancelclosetime()" onmouseout="closetime()">Privacy Policy</a>
+      <a href="register.php" onmouseover="cancelclosetime()" onmouseout="closetime()">Register</a>
+    </div>
+  </li>
+  <li>
+    <a href="forum.php">Forum</a>
+  </li>
+  <li>
+    <a onmouseover="menuopen('submenu3')" onmouseout="closetime()">Account</a>
+    <div id="submenu3">
+      <?php if ($_SESSION['status']!="on") {echo "<a href=\"login.php\" onmouseover=\"cancelclosetime()\" onmouseout=\"closetime()\">Log In</a>";} ?>
+      <?php if (isset($_SESSION['status']) && $_SESSION['status']=="on") {echo "<a href=\"privacy policy.php\" onmouseover=\"cancelclosetime()\" onmouseout=\"closetime()\">Privacy Policy</a>";} ?>
+      <?php if (isset($_SESSION['status']) && $_SESSION['status']=="on") {echo "<a href=\"terms of service.php\" onmouseover=\"cancelclosetime()\" onmouseout=\"closetime()\">Terms of Service</a>";} ?>
+      <?php if (isset($_SESSION['status']) && $_SESSION['status']=="on") {echo "<a href=\"user.php?name=".$_SESSION['username']."\" onmouseover=\"cancelclosetime()\" onmouseout=\"closetime()\">User Page</a>";} ?>
+      <?php if (isset($_SESSION['status']) && $_SESSION['status']=="on") {echo "<a href=\"process logout.php\" onmouseover=\"cancelclosetime()\" onmouseout=\"closetime()\">Log Out</a>";} ?>
+      <?php if (isset($_SESSION['status']) && $_SESSION['status']=="on" && $_SESSION['userlevel']!=4) {echo "<a href=\"delete account.php?name=".$_SESSION['username']."\" onmouseover=\"cancelclosetime()\" onmouseout=\"closetime()\">Delete Account</a>";} ?>
+    </div>
+  </li>
+  </ul>
+  <div style="clear:both"></div>
+  </div><!--END MENU-->
+
+  <div id="userstatus">
+  <?php
+  if (isset($_SESSION['status'])) {
+  if ($_SESSION['status']=="on") {
+  echo "<p>You are logged in.</p><a href=\"process logout.php\">Log out.</a>";
+  } else {
+  echo "<a href=\"login.php\">Login.</a><a href=\"create account.php\">Create an account.</a>";
+  }
+  } else {
+  echo "<a href=\"login.php\">Login.</a><a href=\"create account.php\">Create an account.</a>";
+  }
+  ?>
+  </div><!--END USERSTATUS-->
+
+</div><!--END HEADER-->
