@@ -1,0 +1,123 @@
+1 - Add a record
+2 - Edit a record
+3 - Reports
+4 - Utilities
+5 - Tools
+6 - Help
+
+0 - Quit
+
+1
+
+You selected Add a record
+
+Process returned 0 (0x0)   execution time : 36.564 s
+Press any key to continue.
+
+----------------------------------------------------------------------------
+
+1 - Add a record
+2 - Edit a record
+3 - Reports
+4 - Utilities
+5 - Tools
+6 - Help
+
+0 - Quit
+
+E
+
+You selected Edit a record
+
+Process returned 0 (0x0)   execution time : 5.109 s
+Press any key to continue.
+
+----------------------------------------------------------------------------
+
+1 - Add a record
+2 - Edit a record
+3 - Reports
+4 - Utilities
+5 - Tools
+6 - Help
+
+0 - Quit
+
+r
+
+You selected Reports
+
+Process returned 0 (0x0)   execution time : 2.141 s
+Press any key to continue.
+
+----------------------------------------------------------------------------
+
+1 - Add a record
+2 - Edit a record
+3 - Reports
+4 - Utilities
+5 - Tools
+6 - Help
+
+0 - Quit
+
+4
+
+You selected Utilities
+
+Process returned 0 (0x0)   execution time : 2.859 s
+Press any key to continue.
+
+----------------------------------------------------------------------------
+
+1 - Add a record
+2 - Edit a record
+3 - Reports
+4 - Utilities
+5 - Tools
+6 - Help
+
+0 - Quit
+
+T
+
+You selected Tools
+
+Process returned 0 (0x0)   execution time : 4.250 s
+Press any key to continue.
+
+----------------------------------------------------------------------------
+
+1 - Add a record
+2 - Edit a record
+3 - Reports
+4 - Utilities
+5 - Tools
+6 - Help
+
+0 - Quit
+
+h
+
+You selected Help
+
+Process returned 0 (0x0)   execution time : 1.438 s
+Press any key to continue.
+
+----------------------------------------------------------------------------
+
+1 - Add a record
+2 - Edit a record
+3 - Reports
+4 - Utilities
+5 - Tools
+6 - Help
+
+0 - Quit
+
+0
+
+Program Ending
+
+Process returned 1 (0x1)   execution time : 2.000 s
+Press any key to continue.

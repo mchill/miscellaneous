@@ -1,0 +1,55 @@
+Do you have a string to enter? (Yes, Y, No, N): Y
+
+Enter your string: Quoth the raven, 'Nevermore.'
+
+Last string entered: Quoth the raven, 'Nevermore.'
+In this string there were 9 vowels.
+
+Number of strings entered: 1
+
+
+Do you have a string to enter? (Yes, Y, No, N): Yes
+
+Enter your string: Strangers waiting up and down the boulevard Their shadows sea
+rching in the night
+
+Last string entered: Strangers waiting up and down the boulevard Their shadows s
+earching in the night
+In this string there were 23 vowels.
+
+Number of strings entered: 2
+
+
+Do you have a string to enter? (Yes, Y, No, N): r
+
+Invalid choice. Enter Yes, Y, No, or N.
+
+
+Do you have a string to enter? (Yes, Y, No, N): Y
+
+Enter your string: I shall be telling this with a sigh somewhere ages and ages h
+ence:  Two roads diverged in a wood, and I, I took the one less traveled by, And
+ that has made all the difference.
+
+Last string entered: I shall be telling this with a sigh somewhere ages and ages
+ hence:  Two roads di
+In this string there were 24 vowels.
+
+Number of strings entered: 3
+
+
+Do you have a string to enter? (Yes, Y, No, N): N
+
+Final number of strings entered: 3
+
+Process returned 0 (0x0)   execution time : 133.235 s
+Press any key to continue.
+
+--------------------------------------------------------------------------------
+
+Do you have a string to enter? (Yes, Y, No, N): No
+
+Final number of strings entered: 0
+
+Process returned 0 (0x0)   execution time : 2.453 s
+Press any key to continue.

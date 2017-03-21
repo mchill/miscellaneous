@@ -1,0 +1,24 @@
+Enter char1: A
+Enter char2: B
+Enter int1: 5
+Enter int2: 7
+Enter float1: 3.14
+Enter float2: 2.72
+
+char1 = A
+char2 = B
+int1 = 5
+int2 = 7
+float1 = 3.14
+float2 = 2.72
+
+
+char1 = B
+char2 = A
+int1 = 7
+int2 = 5
+float1 = 2.72
+float2 = 3.14
+
+Process returned 0 (0x0)   execution time : 8.813 s
+Press any key to continue.

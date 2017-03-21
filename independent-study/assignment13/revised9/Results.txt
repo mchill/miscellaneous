@@ -1,0 +1,92 @@
+Enter the name of the file with employee numbers: employees_1
+
+Do you want to enter an employee's hours? (Y,N) y
+Enter the employee number: 6
+Enter the hours worked: 5
+
+Do you want to enter an employee's hours? (Y,N) Y
+Enter the employee number: 11
+Enter the hours worked: 3
+
+Do you want to enter an employee's hours? (Y,N) y
+Enter the employee number: 7
+Enter the hours worked: 7
+
+Do you want to enter an employee's hours? (Y,N) y
+Enter the employee number: 43
+Enter the hours worked: 40
+
+Do you want to enter an employee's hours? (Y,N) y
+Enter the employee number: 6
+Enter the hours worked: 2
+
+Do you want to enter an employee's hours? (Y,N) y
+Enter the employee number: 57
+Enter the hours worked: 10
+
+Do you want to enter an employee's hours? (Y,N) Y
+Enter the employee number: 1
+Invalid employee number.
+
+
+Do you want to enter an employee's hours? (Y,N) n
+
+  Employee    Hours
+    Number  Worked
+
+       6       7
+      21       0
+      43      40
+      57      10
+       7       7
+      11       3
+
+Process returned 0 (0x0)   execution time : 73.127 s
+Press any key to continue.
+
+_________________________________________________________________
+
+Enter the name of the file with employee numbers: employees_2
+
+Do you want to enter an employee's hours? (Y,N) n
+
+  Employee    Hours
+    Number  Worked
+
+       6       0
+      21       0
+      43       0
+      57       0
+       7       0
+      11       0
+      29       0
+      30       0
+
+Process returned 0 (0x0)   execution time : 5.983 s
+Press any key to continue.
+
+_________________________________________________________________
+
+Enter the name of the file with employee numbers: somefile
+That file does not exist.  Try again.
+Enter the name of the file with employee numbers: employees_3
+
+Do you want to enter an employee's hours? (Y,N) n
+
+  Employee    Hours
+    Number  Worked
+
+       6       0
+      21       0
+      43       0
+      57       0
+       7       0
+      11       0
+      29       0
+      30       0
+      11       0
+      13       0
+       9       0
+
+Process returned 0 (0x0)   execution time : 13.724 s
+Press any key to continue.

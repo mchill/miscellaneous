@@ -1,0 +1,60 @@
+Do you want to enter an employee's hours? (Y,N) Y
+Enter the employee number: 6
+Enter the hours worked: 3
+
+Do you want to enter an employee's hours? (Y,N) Y
+Enter the employee number: 7
+Enter the hours worked: 22
+
+Do you want to enter an employee's hours? (Y,N) y
+Enter the employee number: 21
+Enter the hours worked: 21
+
+Do you want to enter an employee's hours? (Y,N) y
+Enter the employee number: 57
+Enter the hours worked: 3
+
+Do you want to enter an employee's hours? (Y,N) Y
+Enter the employee number: 6
+Enter the hours worked: 37
+
+Do you want to enter an employee's hours? (Y,N) Y
+Enter the employee number: 11
+Enter the hours worked: 12
+
+Do you want to enter an employee's hours? (Y,N) y
+Enter the employee number: 30
+Enter the hours worked: 41
+
+Do you want to enter an employee's hours? (Y,N) y
+Enter the employee number: 29
+Enter the hours worked: 10
+
+Do you want to enter an employee's hours? (Y,N) Y
+Enter the employee number: 6
+Enter the hours worked: 2
+
+Do you want to enter an employee's hours? (Y,N) Y
+Enter the employee number: 29
+Enter the hours worked: 1
+
+Do you want to enter an employee's hours? (Y,N) y
+Enter the employee number: 1
+Invalid employee number.
+
+Do you want to enter an employee's hours? (Y,N) N
+
+  Employee    Hours
+    Number  Worked
+
+       6      42
+      21      21
+      43       0
+      57       3
+       7      22
+      11      12
+      29      11
+      30      41
+
+Process returned 0 (0x0)   execution time : 91.735 s
+Press any key to continue.

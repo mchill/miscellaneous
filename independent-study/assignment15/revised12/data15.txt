@@ -1,0 +1,59 @@
+---------------------data15a Initial------------------------
+1,ShamWow,19.95,0
+2,Puppy,52,0
+3,Test Answers,59.99,0
+4,Mystery Meat,78.9,0
+5,Bike,199.99,0
+6,Concert Tickets,250.5,0
+7,Love,1233.33,0
+8,A NEW CAR!,22000,0
+
+---------------------data15a Final------------------------
+1,ShamWow,19.95,3
+2,Puppy,52,4
+3,Test Answers,59.99,0
+4,Mystery Meat,78.9,2
+5,Bike,199.99,1
+6,Concert Tickets,250.5,2
+7,Love,1233.33,3
+8,A NEW CAR!,22000,1
+
+---------------------data15b Initial------------------------
+1,ShamWow,19.95,0
+2,Puppy,52,0
+3,Test Answers,59.99,0
+4,Mystery Meat,78.9,0
+5,Bike,199.99,0
+6,Concert Tickets,250.5,0
+7,Love,1233.33,0
+8,A NEW CAR!,22000,0
+9,Time Machine,50000,0
+10,Time Machine,5000,0
+11,Time Machine,0,0
+
+---------------------data15b Final------------------------
+1,ShamWow,19.95,0
+2,Puppy,52,0
+3,Test Answers,59.99,0
+4,Mystery Meat,78.9,0
+5,Bike,199.99,0
+6,Concert Tickets,250.5,0
+7,Love,1233.33,0
+8,A NEW CAR!,22000,0
+9,Time Machine,50000,0
+10,Time Machine,5000,0
+11,Time Machine,0,0
+
+---------------------data15c Initial------------------------
+1,ShamWow,19.95,0
+2,Puppy,52,0
+3,Test Answers,59.99,0
+4,Mystery Meat,78.9,0
+5,Bike,199.99,0
+
+---------------------data15c Final------------------------
+1,ShamWow,19.95,0
+2,Puppy,52,0
+3,Test Answers,59.99,0
+4,Mystery Meat,78.9,0
+5,Bike,199.99,0

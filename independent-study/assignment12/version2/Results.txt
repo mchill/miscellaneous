@@ -1,0 +1,127 @@
+Enter the number of the product that you wish to order,
+OR Enter E to finish: 1
+How many units would you like to order? 2
+
+
+Product Number: 1
+Product Description: ShamWow
+Unit Price: 19.95
+Quantity Ordered: 2
+Price of this Order: 39.9
+Total Quantity Ordered: 2
+Total Price of this Product: 39.9
+
+Enter the number of the product that you wish to order,
+OR Enter E to finish: 2
+How many units would you like to order? 5
+
+
+Product Number: 2
+Product Description: Puppy
+Unit Price: 52
+Quantity Ordered: 5
+Price of this Order: 260
+Total Quantity Ordered: 5
+Total Price of this Product: 260
+
+Enter the number of the product that you wish to order,
+OR Enter E to finish: 3
+How many units would you like to order? 2
+
+
+Product Number: 3
+Product Description: Test Answers
+Unit Price: 59.99
+Quantity Ordered: 2
+Price of this Order: 119.98
+Total Quantity Ordered: 2
+Total Price of this Product: 119.98
+
+Enter the number of the product that you wish to order,
+OR Enter E to finish: 5
+How many units would you like to order? 6
+
+
+Product Number: 5
+Product Description: Bike
+Unit Price: 199.99
+Quantity Ordered: 6
+Price of this Order: 1199.94
+Total Quantity Ordered: 6
+Total Price of this Product: 1199.94
+
+Enter the number of the product that you wish to order,
+OR Enter E to finish: 7
+How many units would you like to order? 1
+
+
+Product Number: 7
+Product Description: Love
+Unit Price: 1233.33
+Quantity Ordered: 1
+Price of this Order: 1233.33
+Total Quantity Ordered: 1
+Total Price of this Product: 1233.33
+
+Enter the number of the product that you wish to order,
+OR Enter E to finish: 6
+How many units would you like to order? 3
+
+
+Product Number: 6
+Product Description: Concert Tickets
+Unit Price: 250.5
+Quantity Ordered: 3
+Price of this Order: 751.5
+Total Quantity Ordered: 3
+Total Price of this Product: 751.5
+
+Enter the number of the product that you wish to order,
+OR Enter E to finish: 8
+How many units would you like to order? 1
+
+
+Product Number: 8
+Product Description: A NEW CAR!
+Unit Price: 22000
+Quantity Ordered: 1
+Price of this Order: 22000
+Total Quantity Ordered: 1
+Total Price of this Product: 22000
+
+Enter the number of the product that you wish to order,
+OR Enter E to finish: 2
+How many units would you like to order? 10
+
+
+Product Number: 2
+Product Description: Puppy
+Unit Price: 52
+Quantity Ordered: 10
+Price of this Order: 520
+Total Quantity Ordered: 15
+Total Price of this Product: 780
+
+Enter the number of the product that you wish to order,
+OR Enter E to finish: 9
+
+You entered an invalid product number. Please try again.
+Enter the number of the product that you wish to order,
+OR Enter E to finish: e
+
+   Product             Product           Unit       Quantity      Subtotal
+    Number         Description          Price        Ordered
+
+         1             ShamWow          19.95              2           39.9
+         2               Puppy             52             15            780
+         3        Test Answers          59.99              2         119.98
+         4        Mystery Meat           78.9              0              0
+         5                Bike         199.99              6        1199.94
+         6     Concert Tickets          250.5              3          751.5
+         7                Love        1233.33              1        1233.33
+         8          A NEW CAR!          22000              1          22000
+
+                                                      Total:          26120
+
+Process returned 0 (0x0)   execution time : 28.922 s
+Press any key to continue.

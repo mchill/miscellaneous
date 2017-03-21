@@ -1,0 +1,74 @@
+Enter the employee number: 1
+Enter the number of hours worked this week: 42.0
+Enter the hourly rate: 10.00
+Enter whether the employee is full time(FT, ft) or part time(PT, pt): ft
+
+Employee Number: 1
+Hours Worked: 42
+Hourly Rate: 10
+Employee Type: ft
+Gross pay: 440
+
+Enter the employee number: 2
+Enter the number of hours worked this week: 38.0
+Enter the hourly rate: 10.00
+Enter whether the employee is full time(FT, ft) or part time(PT, pt): FT
+
+Employee Number: 2
+Hours Worked: 38
+Hourly Rate: 10
+Employee Type: FT
+Gross pay: 380
+
+Enter the employee number: 3
+Enter the number of hours worked this week: 40.0
+Enter the hourly rate: 10.00
+Enter whether the employee is full time(FT, ft) or part time(PT, pt): Ft
+
+Employee Number: 3
+Hours Worked: 40
+Hourly Rate: 10
+Employee Type: Ft
+Gross pay: 400
+
+Enter the employee number: 4
+Enter the number of hours worked this week: 32.0
+Enter the hourly rate: 10.00
+Enter whether the employee is full time(FT, ft) or part time(PT, pt): pt
+
+Employee Number: 4
+Hours Worked: 32
+Hourly Rate: 10
+Employee Type: pt
+Gross pay: 330
+
+Enter the employee number: 5
+Enter the number of hours worked this week: 28.0
+Enter the hourly rate: 10.00
+Enter whether the employee is full time(FT, ft) or part time(PT, pt): PT
+
+Employee Number: 5
+Hours Worked: 28
+Hourly Rate: 10
+Employee Type: PT
+Gross pay: 280
+
+Enter the employee number: 6
+Enter the number of hours worked this week: 30.0
+Enter the hourly rate: 10.00
+Enter whether the employee is full time(FT, ft) or part time(PT, pt): Pt
+
+Employee Number: 6
+Hours Worked: 30
+Hourly Rate: 10
+Employee Type: Pt
+Gross pay: 300
+
+Enter the employee number: 7
+Enter the number of hours worked this week: 9001
+Enter the hourly rate: 11.00
+Enter whether the employee is full time(FT, ft) or part time(PT, pt): All day everyday
+
+Error: Invalid employee type
+Process returned 1 (0x1)   execution time : 233.588 s
+Press any key to continue.

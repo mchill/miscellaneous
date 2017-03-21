@@ -1,0 +1,8 @@
+5 + 13 = 18
+5 * 2 = 10
+7 * 2 = 14
+5 * 13 = 65
+5 * 13 = 65
+
+Process returned 0 (0x0)   execution time : 0.063 s
+Press any key to continue.

@@ -1,0 +1,19 @@
+PART A
+Enter a radius: 3.4
+Circumference of circle with the entered radius: 21.284
+Area of circle with the entered radius: 36.1828
+Circumference of circle with triple the entered radius: 63.852
+Area of circle with triple the entered radius: 325.645
+
+PART B
+4 + 9 = 13
+46 / 7 = 6
+46 % 7 = 4
+2 * 3.0 = 6
+Float(25) / 14 = 1.79
+Int(7.75) + 2 = 9
+ASCII code for the letter 'P': 80
+Character represented by ASCII code 105: i
+
+Process returned 0 (0x0)   execution time : 0.782 s
+Press any key to continue.

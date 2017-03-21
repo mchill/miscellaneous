@@ -1,0 +1,29 @@
+Enter a value for iNum1: 17
+Enter a value for iNum2: 4
+
+iNum1 = 17
+iNum2 = 4
+
+iNum1 += iNum2++
+iNum1 = 21
+iNum2 = 5
+
+iNum1 -= ++iNum2
+iNum1 = 15
+iNum2 = 6
+
+iNum1 *= --iNum2
+iNum1 = 75
+iNum2 = 5
+
+iNum1 /= iNum2--
+iNum1 = 15
+iNum2 = 4
+
+iNum1 %= iNum2
+iNum1 = 3
+iNum2 = 4
+
+
+Process returned 0 (0x0)   execution time : 6.328 s
+Press any key to continue.

@@ -1,0 +1,199 @@
+Enter the name of the file with employee numbers: data15a
+Enter the number of the product that you wish to order,
+OR Enter E to finish: 1
+How many units would you like to order? 3
+
+
+Product Number: 1
+Product Description: ShamWow
+Unit Price: 19.95
+Quantity Ordered: 3
+Price of this Order: 59.85
+Total Quantity Ordered: 3
+Total Price of this Product: 59.85
+
+Enter the number of the product that you wish to order,
+OR Enter E to finish: 2
+How many units would you like to order? 2
+
+
+Product Number: 2
+Product Description: Puppy
+Unit Price: 52
+Quantity Ordered: 2
+Price of this Order: 104
+Total Quantity Ordered: 2
+Total Price of this Product: 104
+
+Enter the number of the product that you wish to order,
+OR Enter E to finish: 4
+How many units would you like to order? 2
+
+
+Product Number: 4
+Product Description: Mystery Meat
+Unit Price: 78.9
+Quantity Ordered: 2
+Price of this Order: 157.8
+Total Quantity Ordered: 2
+Total Price of this Product: 157.8
+
+Enter the number of the product that you wish to order,
+OR Enter E to finish: 5
+How many units would you like to order? 1
+
+
+Product Number: 5
+Product Description: Bike
+Unit Price: 199.99
+Quantity Ordered: 1
+Price of this Order: 199.99
+Total Quantity Ordered: 1
+Total Price of this Product: 199.99
+
+Enter the number of the product that you wish to order,
+OR Enter E to finish: 6
+How many units would you like to order? 2
+
+
+Product Number: 6
+Product Description: Concert Tickets
+Unit Price: 250.5
+Quantity Ordered: 2
+Price of this Order: 501
+Total Quantity Ordered: 2
+Total Price of this Product: 501
+
+Enter the number of the product that you wish to order,
+OR Enter E to finish: 7
+How many units would you like to order? 3
+
+
+Product Number: 7
+Product Description: Love
+Unit Price: 1233.33
+Quantity Ordered: 3
+Price of this Order: 3699.99
+Total Quantity Ordered: 3
+Total Price of this Product: 3699.99
+
+Enter the number of the product that you wish to order,
+OR Enter E to finish: 8
+How many units would you like to order? 1
+
+
+Product Number: 8
+Product Description: A NEW CAR!
+Unit Price: 22000
+Quantity Ordered: 1
+Price of this Order: 22000
+Total Quantity Ordered: 1
+Total Price of this Product: 22000
+
+Enter the number of the product that you wish to order,
+OR Enter E to finish: 2
+How many units would you like to order? 2
+
+
+Product Number: 2
+Product Description: Puppy
+Unit Price: 52
+Quantity Ordered: 2
+Price of this Order: 104
+Total Quantity Ordered: 4
+Total Price of this Product: 208
+
+Enter the number of the product that you wish to order,
+OR Enter E to finish: 9
+
+You entered an invalid product number. Please try again.
+Enter the number of the product that you wish to order,
+OR Enter E to finish: E
+
+   Product             Product           Unit       Quantity      Subtotal
+    Number         Description          Price        Ordered
+
+         1             ShamWow          19.95              3          59.85
+         2               Puppy             52              4            208
+         3        Test Answers          59.99              0              0
+         4        Mystery Meat           78.9              2          157.8
+         5                Bike         199.99              1         199.99
+         6     Concert Tickets          250.5              2            501
+         7                Love        1233.33              3        3699.99
+         8          A NEW CAR!          22000              1          22000
+
+                                                      Total:          26822
+
+Process returned 0 (0x0)   execution time : 75.298 s
+Press any key to continue.
+---------------------------------------------------------------------------
+Enter the name of the file with employee numbers: data15b
+Enter the number of the product that you wish to order,
+OR Enter E to finish: e
+
+   Product             Product           Unit       Quantity      Subtotal
+    Number         Description          Price        Ordered
+
+         1             ShamWow          19.95              0              0
+         2               Puppy             52              0              0
+         3        Test Answers          59.99              0              0
+         4        Mystery Meat           78.9              0              0
+         5                Bike         199.99              0              0
+         6     Concert Tickets          250.5              0              0
+         7                Love        1233.33              0              0
+         8          A NEW CAR!          22000              0              0
+         9        Time Machine          50000              0              0
+        10        Time Machine           5000              0              0
+        11        Time Machine              0              0              0
+
+                                                      Total:              0
+
+Process returned 0 (0x0)   execution time : 9.047 s
+Press any key to continue.
+---------------------------------------------------------------------------
+Enter the name of the file with employee numbers: somefile
+That file does not exist.  Try again.
+Enter the name of the file with employee numbers: data15c
+Enter the number of the product that you wish to order,
+OR Enter E to finish: e
+
+   Product             Product           Unit       Quantity      Subtotal
+    Number         Description          Price        Ordered
+
+         1             ShamWow          19.95              0              0
+         2               Puppy             52              0              0
+         3        Test Answers          59.99              0              0
+         4        Mystery Meat           78.9              0              0
+         5                Bike         199.99              0              0
+
+                                                      Total:              0
+
+Process returned 0 (0x0)   execution time : 8.656 s
+Press any key to continue.
+---------------------------------------------------------------------------
+Enter the name of the file with employee numbers: data15a
+Enter the number of the product that you wish to order,
+OR Enter E to finish: e
+
+//During product entry, I removed the file data15a.txt.
+
+The product file is missing.
+Now aborting file update.  This order is cancelled.
+The following is an unofficial record of the failed order.
+
+   Product             Product           Unit       Quantity      Subtotal
+    Number         Description          Price        Ordered
+
+         1             ShamWow          19.95              0              0
+         2               Puppy             52              0              0
+         3        Test Answers          59.99              0              0
+         4        Mystery Meat           78.9              0              0
+         5                Bike         199.99              0              0
+         6     Concert Tickets          250.5              0              0
+         7                Love        1233.33              0              0
+         8          A NEW CAR!          22000              0              0
+
+                                                      Total:              0
+
+Process returned 0 (0x0)   execution time : 22.344 s
+Press any key to continue.

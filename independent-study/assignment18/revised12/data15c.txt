@@ -1,0 +1,5 @@
+1,ShamWow,19.95,0
+2,Puppy,52,0
+3,Test Answers,59.99,0
+4,Mystery Meat,78.9,0
+5,Bike,199.99,0
