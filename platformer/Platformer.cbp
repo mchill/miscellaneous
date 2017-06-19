@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Project" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\Debug\Project" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Debug\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin\Release\Project" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Release\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Linker>
+			<Add library="..\..\..\CodeBlocks\allegro-5.0.6-mingw-4.5.2\bin\allegro_acodec-5.0.6-md.dll" />
+			<Add library="..\..\..\CodeBlocks\allegro-5.0.6-mingw-4.5.2\bin\allegro_audio-5.0.6-md.dll" />
+			<Add library="..\..\..\CodeBlocks\allegro-5.0.6-mingw-4.5.2\bin\allegro_color-5.0.6-md.dll" />
+			<Add library="..\..\..\CodeBlocks\allegro-5.0.6-mingw-4.5.2\bin\allegro_dialog-5.0.6-md.dll" />
+			<Add library="..\..\..\CodeBlocks\allegro-5.0.6-mingw-4.5.2\bin\allegro_font-5.0.6-md.dll" />
+			<Add library="..\..\..\CodeBlocks\allegro-5.0.6-mingw-4.5.2\bin\allegro_image-5.0.6-md.dll" />
+			<Add library="..\..\..\CodeBlocks\allegro-5.0.6-mingw-4.5.2\bin\allegro_memfile-5.0.6-md.dll" />
+			<Add library="..\..\..\CodeBlocks\allegro-5.0.6-mingw-4.5.2\bin\allegro_physfs-5.0.6-md.dll" />
+			<Add library="..\..\..\CodeBlocks\allegro-5.0.6-mingw-4.5.2\bin\allegro_primitives-5.0.6-md.dll" />
+			<Add library="..\..\..\CodeBlocks\allegro-5.0.6-mingw-4.5.2\bin\allegro_ttf-5.0.6-md.dll" />
+			<Add library="..\..\..\CodeBlocks\allegro-5.0.6-mingw-4.5.2\bin\allegro-5.0.6-md.dll" />
+			<Add library="..\..\..\CodeBlocks\allegro-5.0.6-mingw-4.5.2\bin\allegro-5.0.6-monolith-md.dll" />
+		</Linker>
+		<Unit filename="character_data.h" />
+		<Unit filename="classes.h" />
+		<Unit filename="functions.h" />
+		<Unit filename="globals.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="maps.h" />
+		<Unit filename="npcs.h" />
+		<Unit filename="objects.h" />
+		<Unit filename="players.h" />
+		<Unit filename="quests.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
