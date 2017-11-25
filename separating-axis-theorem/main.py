@@ -1,7 +1,24 @@
 """Detect and visualize collision using the Separating Axis Theorem."""
 
+import argparse
 from polygon import Polygon
 from vector  import Vector
+
+
+def get_polygons():
+    """Parse the input file and construct the polygons."""
+    parser = argparse.ArgumentParser(description='Detect polygonal collisions.')
+    parser.add_argument('file', help='a file containing polygon data')
+    args = parser.parse_args()
+
+    with open(args.file) as file:
+        lines = file.readlines()
+
+    polygons = []
+    for line in [line.strip().split(' ') for line in lines]:
+        vertices = [[int(pos) for pos in vertex.split(',')] for vertex in line]
+        polygons.append(Polygon(*[Vector(*vertex) for vertex in vertices]))
+    return polygons
 
 
 def is_colliding(first, second):
@@ -23,17 +40,5 @@ def is_colliding(first, second):
     return True
 
 
-FIRST = Polygon(
-    Vector(0, 0),
-    Vector(0, 2),
-    Vector(2, 2),
-    Vector(2, 0)
-)
-SECOND = Polygon(
-    Vector(1, 0),
-    Vector(1, 2),
-    Vector(3, 2),
-    Vector(3, 0)
-)
-
-print is_colliding(FIRST, SECOND)
+polygons = get_polygons()
+print is_colliding(*polygons)
