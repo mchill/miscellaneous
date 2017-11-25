@@ -2,37 +2,43 @@
 """
 Represents a two-dimensional vector.
 """
+import math
+
 
 class Vector(object):
     """Represents a two-dimensional vector."""
 
-    def __init__(self, x, y):
+    def __init__(self, x_pos, y_pos):
         """Initialize the horizontal and vertical coordinates of the vector."""
-        self.x = x
-        self.y = y
+        self.x_pos = x_pos
+        self.y_pos = y_pos
 
     def project_onto(self, other):
         """Return the projection of this vector onto the passed vector."""
-        dot_product = self.x * other.x + self.y * other.y
-        length_squared = other.x ** 2 + other.y ** 2
+        dot_product = self.x_pos * other.x_pos + self.y_pos * other.y_pos
+        length_squared = other.x_pos ** 2 + other.y_pos ** 2
         return other * (dot_product / float(length_squared))
 
     def __sub__(self, other):
         """Overload vector subtraction."""
-        return Vector(self.x - other.x, self.y - other.y)
+        return Vector(self.x_pos - other.x_pos, self.y_pos - other.y_pos)
 
     def __rsub__(self, other):
         """Overload vector subtraction."""
-        return Vector(other.x - self.x, other.y - self.y)
+        return Vector(other.x_pos - self.x_pos, other.y_pos - self.y_pos)
 
     def __mul__(self, constant):
         """Overload scalar multiplication."""
-        return Vector(self.x * constant, self.y * constant)
+        return Vector(self.x_pos * constant, self.y_pos * constant)
 
     def __rmul__(self, constant):
         """Overload scalar multiplication."""
         return self.__mul__(constant)
 
+    def __len__(self):
+        """Returns the magnitude of the vector."""
+        return math.sqrt(self.x_pos ** 2 + self.y_pos ** 2)
+
     def __str__(self):
         """"Print the vector"""
-        return '({}, {})'.format(self.x, self.y)
+        return '({}, {})'.format(self.x_pos, self.y_pos)
