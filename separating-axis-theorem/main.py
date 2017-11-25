@@ -1,8 +1,32 @@
 """Detect and visualize collision using the Separating Axis Theorem."""
 
 import argparse
+from threading import Thread
+import Tkinter
 from polygon import Polygon
 from vector  import Vector
+
+
+def main():
+    """
+    Constructs the canvas, binds keyboard events,
+    and starts the main update loop.
+    """
+    polygons = get_polygons()
+
+    root = Tkinter.Tk()
+    canvas = Tkinter.Canvas(root)
+    canvas.pack()
+
+    root.bind('<Left>', polygons[0].move_left)
+    root.bind('<Right>', polygons[0].move_right)
+    root.bind('<Up>', polygons[0].move_up)
+    root.bind('<Down>', polygons[0].move_down)
+
+    loop_thread = Thread(target=loop, args=(root, canvas, polygons))
+    loop_thread.start()
+    root.mainloop()
+    loop_thread.join()
 
 
 def get_polygons():
@@ -11,8 +35,8 @@ def get_polygons():
     parser.add_argument('file', help='a file containing polygon data')
     args = parser.parse_args()
 
-    with open(args.file) as file:
-        lines = file.readlines()
+    with open(args.file) as input_file:
+        lines = input_file.readlines()
 
     polygons = []
     for line in [line.strip().split(' ') for line in lines]:
@@ -21,24 +45,16 @@ def get_polygons():
     return polygons
 
 
-def is_colliding(first, second):
-    """Detect if the first and second polygons are colliding."""
-    for edge in first.edges:
-        first_projections = []
-        second_projections = []
+def loop(root, canvas, polygons):
+    """Draw the polygons on a canvas and detect collision."""
+    canvas.delete('all')
 
-        for vertex in first.vertices:
-            first_projections.append(len(vertex.project_onto(edge)))
+    for polygon in polygons:
+        polygon.draw(canvas)
+    print polygons[0].is_colliding(polygons[1])
 
-        for vertex in second.vertices:
-            second_projections.append(len(vertex.project_onto(edge)))
-
-        if (min(first_projections) >= max(second_projections) or
-                min(second_projections) >= max(first_projections)):
-            return False
-
-    return True
+    root.after(50, loop, root, canvas, polygons)
 
 
-polygons = get_polygons()
-print is_colliding(*polygons)
+if __name__ == "__main__":
+    main()
