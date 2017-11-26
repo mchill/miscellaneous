@@ -15,27 +15,9 @@ class Polygon(object):
             self.edges.append(vertex - last_vertex)
             last_vertex = vertex
 
-    def move_left(self, _):
-        """Move the polygon left."""
-        self.move(-1, 0)
-
-    def move_right(self, _):
-        """Move the polygon right."""
-        self.move(1, 0)
-
-    def move_up(self, _):
-        """Move the polygon up."""
-        self.move(0, -1)
-
-    def move_down(self, _):
-        """Move the polygon down."""
-        self.move(0, 1)
-
-    def move(self, delta_x, delta_y):
-        """Move the polygon the specified horizontal and vertical distances."""
-        for vertex in self.vertices:
-            vertex.x_pos += delta_x
-            vertex.y_pos += delta_y
+    def move(self, velocity):
+        """Move the polygon the specified velocity."""
+        self.vertices = [vertex + velocity for vertex in self.vertices]
 
     def is_colliding(self, other):
         """Detect if this polygon is colliding with the passed polygon."""
@@ -50,7 +32,7 @@ class Polygon(object):
 
         return True
 
-    def draw(self, canvas):
+    def draw(self, canvas, color):
         """Draw the polygon on the given canvas."""
         vertices = [[vertex.x_pos, vertex.y_pos] for vertex in self.vertices]
-        canvas.create_polygon(vertices, fill='', outline='black')
+        canvas.create_polygon(vertices, fill='', outline=color)

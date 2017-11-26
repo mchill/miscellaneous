@@ -14,6 +14,19 @@ class Vector(object):
         length_squared = other.x_pos ** 2 + other.y_pos ** 2
         return other * (dot_product / float(length_squared))
 
+    def add(self, other):
+        """Add another vector's position to this vector's position."""
+        self.x_pos += other.x_pos
+        self.y_pos += other.y_pos
+
+    def __add__(self, other):
+        """Overload vector addition."""
+        return Vector(self.x_pos + other.x_pos, self.y_pos + other.y_pos)
+
+    def __radd__(self, other):
+        """Overload vector addition."""
+        return self.__add__(other)
+
     def __sub__(self, other):
         """Overload vector subtraction."""
         return Vector(self.x_pos - other.x_pos, self.y_pos - other.y_pos)
