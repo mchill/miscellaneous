@@ -6,10 +6,7 @@ class Polygon(object):
     """Represents a two-dimensional polygon with n edges."""
 
     def __init__(self, *args):
-        """
-        Initialize a polygon, given its vertices.
-        Pre-calculate its edges for efficiency.
-        """
+        """Initialize a polygon, given its vertices. Pre-calculate its edges for efficiency."""
         self.vertices = args
         self.edges = [args[0] - args[len(args) - 1]]
 
@@ -43,17 +40,12 @@ class Polygon(object):
     def is_colliding(self, other):
         """Detect if this polygon is colliding with the passed polygon."""
         for edge in self.edges:
-            first_projections = []
-            second_projections = []
+            check = 'x_pos' if abs(edge.x_pos) > abs(edge.y_pos) else 'y_pos'
 
-            for vertex in self.vertices:
-                first_projections.append(len(vertex.project_onto(edge)))
+            self_projections = [getattr(vertex.project_onto(edge), check) for vertex in self.vertices]
+            other_projections = [getattr(vertex.project_onto(edge), check) for vertex in other.vertices]
 
-            for vertex in other.vertices:
-                second_projections.append(len(vertex.project_onto(edge)))
-
-            if (min(first_projections) >= max(second_projections) or
-                    min(second_projections) >= max(first_projections)):
+            if min(self_projections) >= max(other_projections) or min(other_projections) >= max(self_projections):
                 return False
 
         return True

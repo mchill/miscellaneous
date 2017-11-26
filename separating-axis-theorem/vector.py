@@ -1,9 +1,4 @@
-#!/usr/bin/python
-"""
-Represents a two-dimensional vector.
-"""
-import math
-
+"""Represents a two-dimensional vector."""
 
 class Vector(object):
     """Represents a two-dimensional vector."""
@@ -34,10 +29,6 @@ class Vector(object):
     def __rmul__(self, constant):
         """Overload scalar multiplication."""
         return self.__mul__(constant)
-
-    def __len__(self):
-        """Returns the magnitude of the vector."""
-        return math.sqrt(self.x_pos ** 2 + self.y_pos ** 2)
 
     def __str__(self):
         """"Print the vector"""

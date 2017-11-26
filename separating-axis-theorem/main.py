@@ -1,3 +1,4 @@
+#!/usr/bin/python
 """Detect and visualize collision using the Separating Axis Theorem."""
 
 import argparse
@@ -8,10 +9,7 @@ from vector  import Vector
 
 
 def main():
-    """
-    Constructs the canvas, binds keyboard events,
-    and starts the main update loop.
-    """
+    """Constructs the canvas, binds keyboard events, and starts the main update loop."""
     polygons = get_polygons()
 
     root = Tkinter.Tk()
