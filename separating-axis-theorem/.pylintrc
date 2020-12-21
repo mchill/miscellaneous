@@ -1,8 +1,0 @@
-[BASIC]
-good-names=UP
-
-[FORMAT]
-max-line-length=120
-
-[DESIGN]
-min-public-methods=0
