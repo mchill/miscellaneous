@@ -1,0 +1,229 @@
+auth:
+  email: <REDACTED>
+  password: <REDACTED>
+
+feeds:
+  - name: public
+    url: https://www.fangasmpodcast.com/episodes?format=rss
+    channelTags:
+      - itunes:subtitle
+      - description
+      - link
+      - language
+      - itunes:author
+      - itunes:image
+      - itunes:category
+      - itunes:type
+      - itunes:explicit
+    itemTags:
+      - title
+      - itunes:subtitle
+      - description
+      - itunes:summary
+      - link
+      - itunes:image
+      - itunes:season
+      - enclosure
+      - pubDate
+      - itunes:duration
+      - guid
+  - name: patreon
+    url: https://www.patreon.com/rss/fangasm?auth=<REDACTED>
+    channelTags:
+      - itunes:block
+    itemTags:
+      - title
+      - description
+      - link
+      - enclosure
+      - pubDate
+      - guid
+
+posts:
+  campaignId: 1537452
+  tags:
+    - tag: title
+      text: attributes.title
+    - tag: itunes:subtitle
+      text: attributes.teaser_text
+    - tag: description
+      text: attributes.content
+    - tag: itunes:summary
+      text: attributes.content
+    - tag: link
+      text: attributes.url
+    - tag: enclosure
+      attributes:
+        - name: url
+          from: attributes.embed.url
+    - tag: pubDate
+      text: attributes.published_at
+    - tag: guid
+      text: id
+      attributes:
+        - name: isPermaLink
+          value: "false"
+
+defaults:
+  channel:
+    - tag: title
+      text: Fangasm (Merged)
+  items:
+    - tag: itunes:image
+      attributes:
+        - name: href
+          value: https://images.squarespace-cdn.com/content/5ce6ee028d81e00001df05ab/1560360190160-2N11QMJA11GFRJW37IJF/fangasm-FINAL%E2%80%941400x1400+%281%29.png?content-type=image%2Fpng
+
+overrides:
+  - guid: "23322787" # Q1E1
+    tags:
+      - tag: pubDate
+        text: "Thu, 16 Mar 2017 06:00:09 +0000"
+  - guid: "23322911" # Q1E2
+    tags:
+      - tag: pubDate
+        text: "Wed, 22 Mar 2017 22:57:34 +0000"
+  - guid: "23322954" # Q1E3
+    tags:
+      - tag: pubDate
+        text: "Wed, 29 Mar 2017 21:11:15 +0000"
+  - guid: "23324019" # S2: Meet the Author
+    tags:
+      - tag: pubDate
+        text: "Fri, 23 Jun 2017 06:00:49 +0000"
+  - guid: "23324082" # Q2
+    tags:
+      - tag: pubDate
+        text: "Wed, 28 Jun 2017 08:00:12 +0000"
+  - guid: "23323108" # Q3E1
+    tags:
+      - tag: pubDate
+        text: "Thu, 29 Jun 2017 21:47:28 +0000"
+  - guid: "23323817" # Q3E2
+    tags:
+      - tag: pubDate
+        text: "Thu, 06 Jul 2017 21:26:19 +0000"
+  - guid: "23323853" # Q3E3
+    tags:
+      - tag: pubDate
+        text: "Thu, 13 Jul 2017 21:17:17 +0000"
+  - guid: "23323904" # Q3E4
+    tags:
+      - tag: pubDate
+        text: "Thu, 20 Jul 2017 23:49:29 +0000"
+  - guid: "23324213" # Q4
+    tags:
+      - tag: pubDate
+        text: "Tue, 25 Jul 2017 08:00:33 +0000"
+  - guid: "23324184" # Q3
+    tags:
+      - tag: pubDate
+        text: "Wed, 26 Jul 2017 18:41:38 +0000"
+  - guid: "23324317" # T&A with the Hosts
+    tags:
+      - tag: pubDate
+        text: "Sun, 20 Aug 2017 05:00:00 +0000"
+  - guid: "23324415" # Pillowtalk: Live from Wizard World Comic Con Chicago
+    tags:
+      - tag: pubDate
+        text: "Mon, 28 Aug 2017 13:00:00 +0000"
+  - guid: "23324242" # S3: Meet the Author
+    tags:
+      - tag: pubDate
+        text: "Fri, 22 Sep 2017 10:00:00 +0000"
+  - guid: "23324514" # Q5
+    tags:
+      - tag: pubDate
+        text: "Tue, 26 Sep 2017 10:00:00 +0000"
+  - guid: "23324534" # Q6
+    tags:
+      - tag: pubDate
+        text: "Tue, 03 Oct 2017 10:00:00 +0000"
+  - guid: "23324598" # Q7
+    tags:
+      - tag: pubDate
+        text: "Sun, 08 Oct 2017 23:47:00 +0000"
+  - guid: "23324664" # Q8
+    tags:
+      - tag: pubDate
+        text: "Fri, 27 Oct 2017 10:00:00 +0000"
+  - guid: "23324781" # Q9E1
+    tags:
+      - tag: pubDate
+        text: "Tue, 21 Nov 2017 10:00:00 +0000"
+  - guid: "23324811" # Q9E2
+    tags:
+      - tag: pubDate
+        text: "Tue, 28 Nov 2017 11:00:00 +0000"
+  - guid: "23324834" # Q10E1
+    tags:
+      - tag: pubDate
+        text: "Tue, 05 Dec 2017 11:00:00 +0000"
+  - guid: "23324851" # Q10E2
+    tags:
+      - tag: pubDate
+        text: "Tue, 12 Dec 2017 11:00:00 +0000"
+  - guid: "23324867" # Q11
+    tags:
+      - tag: pubDate
+        text: "Tue, 19 Dec 2017 11:00:00 +0000"
+  - guid: "23324978" # Q12
+    tags:
+      - tag: pubDate
+        text: "Tue, 26 Dec 2017 11:00:00 +0000"
+  - guid: "23325018" # Q13
+    tags:
+      - tag: pubDate
+        text: "Tue, 02 Jan 2018 11:00:00 +0000"
+  - guid: "23325084" # Q14
+    tags:
+      - tag: pubDate
+        text: "Fri, 19 Jan 2018 11:00:00 +0000"
+  - guid: "23336163" # Pillowtalk: Holiday Sing-along
+    tags:
+      - tag: pubDate
+        text: "Fri, 26 Jan 2018 11:00:00 +0000"
+  - guid: "23336192" # Q15E1
+    tags:
+      - tag: pubDate
+        text: "Tue, 20 Feb 2018 11:00:00 +0000"
+  - guid: "23336232" # Q15E2
+    tags:
+      - tag: pubDate
+        text: "Tue, 27 Feb 2018 11:00:00 +0000"
+  - guid: "23336261" # Q16E1
+    tags:
+      - tag: pubDate
+        text: "Tue, 06 Mar 2018 11:00:00 +0000"
+  - guid: "23336355" # Q16E2
+    tags:
+      - tag: pubDate
+        text: "Tue, 13 Mar 2018 10:00:00 +0000"
+  - guid: "23336392" # Q17
+    tags:
+      - tag: pubDate
+        text: "Tue, 20 Mar 2018 10:00:00 +0000"
+  - guid: "23336421" # Q18
+    tags:
+      - tag: pubDate
+        text: "Tue, 27 Mar 2018 10:00:00 +0000"
+  - guid: "23336467" # Q22
+    tags:
+      - tag: pubDate
+        text: "Fri, 25 May 2018 05:00:05 +0000"
+  - guid: "23336525" # Q23
+    tags:
+      - tag: pubDate
+        text: "Tue, 12 Jun 2018 05:00:25 +0000"
+  - guid: "23336592" # Q25
+    tags:
+      - tag: pubDate
+        text: "Tue, 27 Nov 2018 05:00:20 +0000"
+  - guid: "42121943" # Pod in Review, Part 1
+    tags:
+      - tag: pubDate
+        text: "Tue, 10 Dec 2019 12:03:00 +0000"
+  - guid: "42122059" # Pod in Review, Part 2
+    tags:
+      - tag: pubDate
+        text: "Tue, 17 Dec 2019 12:03:00 +0000"
