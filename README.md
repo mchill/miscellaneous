@@ -15,3 +15,4 @@ Projects                                                   | Year        | Langu
 [Advent of Code](https://github.com/mchill/advent-of-code) | 2015 - 2020 | C++, Ruby, Python, Go, C#
 [BeaconBone](https://github.com/mchill/beacon-bone)        | 2016        | CoffeeScript
 [Drive Ya Nuts Puzzle Solver](drive-ya-nuts)               | 2017        | Python
+[RSS Merger](rss-merger)                                   | 2021        | Python
