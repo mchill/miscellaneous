@@ -16,3 +16,4 @@ Projects                                                   | Year        | Langu
 [BeaconBone](https://github.com/mchill/beacon-bone)        | 2016        | CoffeeScript
 [Drive Ya Nuts Puzzle Solver](drive-ya-nuts)               | 2017        | Python
 [RSS Merger](rss-merger)                                   | 2021        | Python
+[Audiobook RSS](audiobook-rss)                             | 2021        | Python
