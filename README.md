@@ -12,7 +12,7 @@ Projects                                                   | Year        | Langu
 [Platformer](platformer)                                   | 2013        | C++
 [12th Grade Independent Study](independent-study)          | 2013        | C++
 [Independent Study Project: Pirate-Man](pirate-man)        | 2013        | C++
-[Advent of Code](https://github.com/mchill/advent-of-code) | 2015 - 2020 | C++, Ruby, Python, Go, C#
+[Advent of Code](https://github.com/mchill/advent-of-code) | 2015 - 2021 | C++, Ruby, Python, Go, C#, TypeScript
 [BeaconBone](https://github.com/mchill/beacon-bone)        | 2016        | CoffeeScript
 [Drive Ya Nuts Puzzle Solver](drive-ya-nuts)               | 2017        | Python
 [RSS Merger](rss-merger)                                   | 2021        | Python
