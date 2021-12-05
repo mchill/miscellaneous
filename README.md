@@ -5,15 +5,16 @@ myself how to program. This is meant to demonstrate progression.
 
 Follow each link for more information on the project.
 
-Projects                                                   | Year        | Language
------------------------------------------------------------|-------------|------------------
-[Skydiving Website](skydiving-website)                     | 2011        | PHP
-[First Game: Space Shooter](first-game)                    | 2012        | C++
-[Platformer](platformer)                                   | 2013        | C++
-[12th Grade Independent Study](independent-study)          | 2013        | C++
-[Independent Study Project: Pirate-Man](pirate-man)        | 2013        | C++
-[Advent of Code](https://github.com/mchill/advent-of-code) | 2015 - 2021 | C++, Ruby, Python, Go, C#, TypeScript
-[BeaconBone](https://github.com/mchill/beacon-bone)        | 2016        | CoffeeScript
-[Drive Ya Nuts Puzzle Solver](drive-ya-nuts)               | 2017        | Python
-[RSS Merger](rss-merger)                                   | 2021        | Python
-[Audiobook RSS](audiobook-rss)                             | 2021        | Python
+Projects                                                        | Year        | Language
+----------------------------------------------------------------|-------------|---------
+[Skydiving Website](skydiving-website)                          | 2011        | PHP
+[First Game: Space Shooter](first-game)                         | 2012        | C++
+[Platformer](platformer)                                        | 2013        | C++
+[12th Grade Independent Study](independent-study)               | 2013        | C++
+[Independent Study Project: Pirate-Man](pirate-man)             | 2013        | C++
+[Advent of Code](https://github.com/mchill/advent-of-code)      | 2015 - 2021 | C++, Ruby, Python, Go, C#, TypeScript
+[BeaconBone](https://github.com/mchill/beacon-bone)             | 2016        | CoffeeScript
+[Drive Ya Nuts Puzzle Solver](drive-ya-nuts)                    | 2017        | Python
+[Brackeys Game Jam](https://github.com/GalAfik/BrackeysJam2020) | 2020        | C# (Unity)
+[RSS Merger](rss-merger)                                        | 2021        | Python
+[Audiobook RSS](audiobook-rss)                                  | 2021        | Python
