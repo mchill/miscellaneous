@@ -1,6 +1,7 @@
 auth:
   email: <REDACTED>
   password: <REDACTED>
+  datadome: <REDACTED>
 
 feeds:
   - name: public
@@ -219,6 +220,10 @@ overrides:
     tags:
       - tag: pubDate
         text: "Tue, 27 Nov 2018 05:00:20 +0000"
+  - guid: "49671995" # All Good Things Must Come to an End
+    tags:
+      - tag: pubDate
+        text: "Tue, 1 Oct 2019 11:05:00 +0000"
   - guid: "42121943" # Pod in Review, Part 1
     tags:
       - tag: pubDate

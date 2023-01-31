@@ -28,12 +28,19 @@ python download.py --url https://my.server.com/path/ --folder /path/to/folder
 
 Rather than use command-line arguments, most of tool's configuration is defined by a single yaml file. The file format is documented below.
 
+Patreon secures parts of its API behind the anti-bot service DataDome. To handle this, do the following:
+1. Navigate to https://www.patreon.com/api/posts/1 in a browser
+2. Complete the anti-captcha test
+3. Open network tools
+4. Copy datadome cookie value to config file
+
 > Note: This is only for documentation. I included a full example [here](example-config.yaml).
 
 ```yaml
 auth:                       # Patreon credentials (only required if posts "campaignId" is given rather than "filename")
   email: user@google.com    # Patreon email
   password: password123     # Patreon password
+  datadome: value           # datadome cookie value copied from browser
 
 feeds:                      # List of feeds to merge
   - name: public            # Reference name for the feed

@@ -4,7 +4,7 @@ from os import path
 import requests
 from tinytag import TinyTag
 import urllib.parse
-import youtube_dl
+from yt_dlp import YoutubeDL
 
 
 def sanitizeTag(tag, nsmap):
@@ -27,6 +27,7 @@ def formatDuration(duration):
 def processItem(item, args, nsmap):
     """Set media metadata for an item that couldn't be set before downloading."""
 
+    title = item.find('title').text
     enclosure = item.find('enclosure')
     url = enclosure.attrib['url']
     guid = item.find('guid').text.replace(':', '')
@@ -34,7 +35,7 @@ def processItem(item, args, nsmap):
     filename = '{}.{}'.format(guid, suffix)
     filepath = path.join(args.folder, filename)
 
-    download(url, filepath)
+    download(title, url, filepath)
     size = path.getsize(filepath)
     enclosure.attrib['length'] = str(size)
     enclosure.attrib['url'] = urllib.parse.urljoin(args.url, filename)
@@ -47,11 +48,13 @@ def processItem(item, args, nsmap):
     durationElement.text = duration
 
 
-def download(url, filepath):
+def download(title, url, filepath):
     """Download the file if it can't be found on the local filesystem."""
 
     if path.exists(filepath):
         return
+
+    print(f'Downloading {title}')
 
     if 'youtu' not in url:
         response = requests.get(url, allow_redirects=True)
@@ -66,7 +69,7 @@ def download(url, filepath):
         }],
         'outtmpl': filepath
     }
-    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+    with YoutubeDL(ydl_opts) as ydl:
         ydl.download([url])
 
 

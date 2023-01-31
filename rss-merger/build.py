@@ -104,12 +104,18 @@ def createVideoItems(posts, auth):
         with open(posts['filename']) as f:
             data = json.load(f)
     else:
-        payload = {'data': {'email': auth['email'], 'password': auth['password']}}
         session = requests.Session()
-        response = session.post('https://www.patreon.com/api/login', json=payload)
+        session.cookies.set("datadome", auth['datadome'], domain="patreon.com")
+        headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:107.0) Gecko/20100101 Firefox/107.0'}
+
+        payload = {'data': {'email': auth['email'], 'password': auth['password']}}
+        response = session.post('https://www.patreon.com/api/login', headers=headers, json=payload)
         if response.status_code != 200:
             raise RuntimeError('Patreon authentication failed')
-        response = session.get('https://www.patreon.com/api/posts?filter[campaign_id]={}&page[size]=1000'.format(posts['campaignId']))
+
+        response = session.get('https://www.patreon.com/api/posts?filter[campaign_id]={}&page[size]=1000'.format(posts['campaignId']), headers=headers)
+        if response.status_code != 200:
+            raise RuntimeError('Failed to fetch posts')
         data = response.json()
 
     items = []
