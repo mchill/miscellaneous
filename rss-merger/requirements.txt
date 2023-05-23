@@ -1,4 +1,4 @@
-requests==2.28.2
+requests==2.31.0
 lxml==4.9.2
 tinytag==1.8.1
 yt_dlp==2023.1.6
