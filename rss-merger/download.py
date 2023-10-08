@@ -30,7 +30,7 @@ def processItem(item, args, nsmap):
     title = item.find('title').text
     enclosure = item.find('enclosure')
     url = enclosure.attrib['url']
-    guid = item.find('guid').text.replace(':', '')
+    guid = item.find('guid').text.replace(':', '_')
     suffix = 'mp4' if 'youtu' in url else url.partition('?')[0].rpartition('.')[2]
     filename = '{}.{}'.format(guid, suffix)
     filepath = path.join(args.folder, filename)

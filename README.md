@@ -12,9 +12,9 @@ Projects                                                        | Year        | 
 [Platformer](platformer)                                        | 2013        | C++
 [12th Grade Independent Study](independent-study)               | 2013        | C++
 [Independent Study Project: Pirate-Man](pirate-man)             | 2013        | C++
-[Advent of Code](https://github.com/mchill/advent-of-code)      | 2015 - 2022 | C++, Ruby, Python, Go, C#, TypeScript, Rust
 [BeaconBone](https://github.com/mchill/beacon-bone)             | 2016        | CoffeeScript
 [Drive Ya Nuts Puzzle Solver](drive-ya-nuts)                    | 2017        | Python
 [Brackeys Game Jam](https://github.com/GalAfik/BrackeysJam2020) | 2020        | C# (Unity)
 [RSS Merger](rss-merger)                                        | 2021        | Python
 [Audiobook RSS](audiobook-rss)                                  | 2021        | Python
+[Advent of Code](https://github.com/mchill/advent-of-code)      | 2015 - 2022 | C++, Ruby, Python, Go, C#, TypeScript, Rust
